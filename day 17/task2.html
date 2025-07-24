@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="taskInput" type="text">
+    <button id="addBtn">Add Task</button>
+    <ul id="taskList"></ul>
+    <script>
+        // 2. To - Do List
+        // Create a to -do list where users can add tasks, mark them done, and delete them.
+        // Use createElement, appendChild, classList, and addEventListener.
+        document.getElementById("addBtn").addEventListener("click",()=>{
+            const li=document.createElement("li");
+            li.innerText=document.getElementById("taskInput").value;
+            document.getElementById("taskList").appendChild(li);
+        });
+        
+    </script>
+</body>
+
+</html>

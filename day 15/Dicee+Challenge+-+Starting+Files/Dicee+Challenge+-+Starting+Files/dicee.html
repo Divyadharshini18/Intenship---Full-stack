@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="" />
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="" />
+      </div>
+    </div>
+
+    <footer>www 🎲 App Brewery 🎲 com</footer>
+    <script>
+      var r1 = Math.floor(Math.random()*6)+1;
+      var r2 = Math.floor(Math.random()*6)+1;
+      document.getElementsByTagName("img")[0].setAttribute("src","images/dice"+r1+".png");
+      document.getElementsByTagName("img")[1].setAttribute("src","images/dice"+r2+".png");
+      document.getElementsByTagName("h1")[0].textContent=r1===r2 ? " 🚩draw 🚩": r1>r2 ? '🚩player1 wins':'player2 wins🚩'
+    </script>
+  </body>
+</html>
